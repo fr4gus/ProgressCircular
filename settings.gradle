@@ -1,1 +1,1 @@
-include ':app', ':progresscircular'
+include ':sampleapp', ':library'

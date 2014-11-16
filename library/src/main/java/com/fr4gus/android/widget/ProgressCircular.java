@@ -21,10 +21,11 @@ public class ProgressCircular extends TextView {
     int mCurrentColor;
     int mRemainingColor;
 
-    int mStrokeWidth;
+    float mStrokeWidth;
     int mTotal;
     int mCurrent;
     double mPercentage;
+    int mStartAngle;
 
     boolean mShowPercentage;
     boolean mOverrideText;
@@ -55,7 +56,7 @@ public class ProgressCircular extends TextView {
         mRectF.set(mStrokeWidth, mStrokeWidth, getWidth() - mStrokeWidth, getHeight() - mStrokeWidth);
         int degrees = (int) ((360.0 * mPercentage));
         canvas.drawOval(mRectF, mRemainingPaint);
-        canvas.drawArc(mRectF, 0, degrees, false, mCurrentPaint);
+        canvas.drawArc(mRectF, mStartAngle, degrees, false, mCurrentPaint);
         super.onDraw(canvas);
     }
 
@@ -81,12 +82,14 @@ public class ProgressCircular extends TextView {
         try {
             mCurrentColor = a.getColor(R.styleable.ProgressCircularStyle_remainingColor, Color.RED);
             mRemainingColor = a.getColor(R.styleable.ProgressCircularStyle_currentColor, Color.DKGRAY);
-            mStrokeWidth = a.getInt(R.styleable.ProgressCircularStyle_strokeWidth, 3);
-            mTotal = a.getInt(R.styleable.ProgressCircularStyle_total, 100);
-            mCurrent = a.getInt(R.styleable.ProgressCircularStyle_current, 0);
+
+            mStrokeWidth = a.getDimension(R.styleable.ProgressCircularStyle_strokeWidth, 3.0f);
+            setProgress(a.getInt(R.styleable.ProgressCircularStyle_progress, 0));
+            setTotal(a.getInt(R.styleable.ProgressCircularStyle_total, 100));
+            setCurrent(a.getInt(R.styleable.ProgressCircularStyle_current, 0));
             mShowPercentage = a.getBoolean(R.styleable.ProgressCircularStyle_showPercentage, true);
             mOverrideText = a.getBoolean(R.styleable.ProgressCircularStyle_overrideText, false);
-            setProgress(a.getInt(R.styleable.ProgressCircularStyle_progress, 0));
+            mStartAngle = a.getInt(R.styleable.ProgressCircularStyle_startAngle, 180);
             setGravity(Gravity.CENTER);
         } finally {
             a.recycle();

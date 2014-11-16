@@ -10,11 +10,54 @@
                 tools:context=".SampleActivity">
 
     <com.fr4gus.android.widget.ProgressCircular
-        android:id="@android:id/progress"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        progressCircular:progress="50"
+        android:id="@id/progress_1"
+        android:layout_width="@dimen/progress_size"
+        android:layout_height="@dimen/progress_size"
+        android:layout_toLeftOf="@id/progress_2"
+        android:textColor="#fff"
+        progressCircular:progress="0"
         progressCircular:currentColor="#ff0000"
-        progressCircular:remainingColor="#9c9c9c"
+        progressCircular:remainingColor="#fff"
         />
+
+    <com.fr4gus.android.widget.ProgressCircular
+        android:id="@id/progress_2"
+        android:layout_width="@dimen/progress_size"
+        android:layout_height="@dimen/progress_size"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        progressCircular:current="0"
+        progressCircular:total="100"
+        progressCircular:showPercentage="false"
+        progressCircular:currentColor="#fff"
+        progressCircular:remainingColor="#33cc33"
+        />
+
+    <com.fr4gus.android.widget.ProgressCircular
+        android:id="@id/progress_3"
+        android:layout_width="@dimen/progress_size"
+        android:layout_height="@dimen/progress_size"
+        android:layout_toRightOf="@id/progress_2"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        progressCircular:strokeWidth="8dp"
+        progressCircular:progress="0"
+        progressCircular:currentColor="#3399ff"
+        progressCircular:remainingColor="#ff3300"
+        />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@id/progress_1"
+        android:layout_centerHorizontal="true"
+        android:progress="0"
+        android:max="100"
+        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
 </RelativeLayout>
