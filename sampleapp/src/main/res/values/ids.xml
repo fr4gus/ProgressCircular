@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="progress_1" type="id" />
+    <item name="progress_2" type="id" />
+    <item name="progress_3" type="id" />
+    <item name="progress_4" type="id" />
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressCircularStyle">
+        <attr name="currentColor" format="color"/>
+        <attr name="remainingColor" format="color"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="current" format="integer"/>
+        <attr name="total" format="integer"/>
+        <attr name="progress" format="integer"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="showPercentage" format="boolean"/>
+        <attr name="overrideText" format="boolean"/>
+        <attr name="startAngle" format="integer"/>
+    </declare-styleable>
+</resources>
