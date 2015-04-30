@@ -1,5 +1,5 @@
 # ProgressCircular
-[!ProgressCircular in Action](http://github.com/fr4gus/ProgressCircular/raw/master/doc/images/preview.png)
+![ProgressCircular in Action](http://github.com/fr4gus/ProgressCircular/raw/master/doc/images/preview.png)
 Similar to ProgressBar Android Widget, except that this is circular (but is not undefined as standard widget, yet).
 
 ## How to use it
