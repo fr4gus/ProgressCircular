@@ -1,14 +1,16 @@
 # ProgressCircular
-[!ProgressCircular in Action](/docs/images/preview.png)
+[!ProgressCircular in Action](docs/images/preview.png)
 Similar to ProgressBar Android Widget, except that this is circular (but is not undefined as standard widget, yet).
 
 ## How to use it
 
 1. Add the following line in your build.gradle
 
+```
 dependencies {
     compile 'com.fr4gus:progresscircular:1.0.0-SNAPSHOT'
 }
+```
 
 2. Add the widget in your XML Layout file
 ```xml
@@ -24,7 +26,7 @@ dependencies {
             progressCircular:showPercentage="false"
             progressCircular:total="100"
             />
-
+```
 ## The details
 
 This widget can be used as a different way to present data, like porcentages or remaining tasks, achivementes, to complete.
