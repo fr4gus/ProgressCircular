@@ -9,6 +9,11 @@ Similar to ProgressBar Android Widget, except that this is circular (but is not 
 1. Add the following line in your build.gradle
 
 ```
+repositories {
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    mavenCentral()
+}
+
 dependencies {
     compile 'com.fr4gus:progresscircular:1.0.0-SNAPSHOT'
 }
