@@ -104,7 +104,7 @@ public class ProgressCircular extends TextView {
             setCurrent(a.getInt(R.styleable.ProgressCircularStyle_current, 0));
             mShowPercentage = a.getBoolean(R.styleable.ProgressCircularStyle_showPercentage, true);
             mOverrideText = a.getBoolean(R.styleable.ProgressCircularStyle_overrideText, false);
-            mStartAngle = a.getInt(R.styleable.ProgressCircularStyle_startAngle, 180);
+            mStartAngle = a.getInt(R.styleable.ProgressCircularStyle_startAngle, 90);
             setGravity(Gravity.CENTER);
         } finally {
             a.recycle();
